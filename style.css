@@ -5,6 +5,8 @@
             margin: 0;
             background-image: url('images/WhatsApp\ Image\ 2026-02-03\ at\ 12.34.42\ PM.jpeg');
             height: 100vh;
+            background-repeat: no-repeat;
+            background-size: cover;
             overflow: hidden;
             display: flex;
             flex-direction: column;
