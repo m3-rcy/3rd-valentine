@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Be My Valentine?</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: "Georgia", serif;
+            background: linear-gradient(to bottom right, #ffe6f0, #fff0f5);
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #d63384;
+            margin-bottom: 30px;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            margin: 20px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.2s ease;
+        }
+
+        #yesBtn {
+            background-color: #ff4d6d;
+            color: white;
+        }
+
+        #noBtn {
+            background-color: #adb5bd;
+            color: white;
+            position: absolute;
+        }
+
+        #message {
+            display: none;
+            font-size: 1.4em;
+            color: #c9184a;
+            margin-top: 40px;
+            max-width: 600px;
+            line-height: 1.6;
+            padding: 0 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Kelvin, will you be my Valentine? 💘</h1>
+
+    <div id="buttons">
+        <button id="yesBtn" onclick="sayYes()">Yes 💗</button>
+        <button id="noBtn">No </button>
+    </div>
+
+    <div id="message">
+        okay this is crazy… I’ve really liked this,
+        but the more feminine I allow myself to be,
+        the more I realize how much I love it.
+        <br><br>
+        Being soft and girly — it feels so right.
+        <br><br>
+        Happy Valentine’s Day, my love. 💕
+    </div>
+
+    <script>
+        const noBtn = document.getElementById("noBtn");
+
+        noBtn.addEventListener("mouseover", function () {
+            const maxX = window.innerWidth - noBtn.offsetWidth;
+            const maxY = window.innerHeight - noBtn.offsetHeight;
+
+            const x = Math.floor(Math.random() * maxX);
+            const y = Math.floor(Math.random() * maxY);
+
+            noBtn.style.position = "absolute";
+            noBtn.style.left = x + "px";
+            noBtn.style.top = y + "px";
+        });
+
+        function sayYes() {
+            document.getElementById("buttons").style.display = "none";
+            document.getElementById("message").style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
